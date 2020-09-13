@@ -1,0 +1,33 @@
+{
+  "name": "puppeteer-cucumber-bdd-pro",
+  "version": "1.0.0",
+  "description": "puppeteer-cucumber-bdd-project",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js -f json:cucumber_report.json",
+    "generate:report": "node report.js"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.2.0",
+    "prettier": "^2.1.1",
+    "puppeteer": "^3.0.2",
+    "puppeteer-autoscroll-down": "^0.1.6"
+  },
+  "keywords": [
+    "cucumber",
+    "BDD",
+    "puppeteer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falgun2411/puppeteer-cucumber-bdd-pro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/falgun2411/puppeteer-cucumber-bdd-pro/issues"
+  },
+  "homepage": "https://github.com/falgun2411/puppeteer-cucumber-bdd-pro#readme"
+}
