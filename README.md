@@ -17,3 +17,8 @@ type command in command prompt
 
 npm run generate:report
 
+# NOTE
+currently this cases are running in headless mode
+if you wish to run in Browser mode then kindly update       headless: false, slowMo: 100, args: [
+
+https://github.com/falgun2411/puppeteer-cucumber-bdd-pro/blob/master/features/support/world.js#L10
