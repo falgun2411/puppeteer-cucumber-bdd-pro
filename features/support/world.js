@@ -149,14 +149,15 @@ class CustomWorld {
   }
 
   async verifySwitchToOnlineIn5MinuteButton(buttonName) {
+    await this.page.waitFor(500)
     const path_In5MinButton = '.responsive-label-txt.offer-page-cta'
     await this.page.waitForSelector(path_In5MinButton, { visible: true }, { timeout: 1000 });
-    const buttonText = await this.page.$eval(path_In5MinButton, (elem) =>{
+    const buttonText = await this.page.$eval(path_In5MinButton, (elem) => {
       return window.getComputedStyle(elem, ':before').getPropertyValue('content')
     });
-    console.log('buttonText:' + buttonText);   
-    expect(buttonText.trim()).to.be.eq(buttonName)
-
+    console.log('buttonText:' + buttonText);
+    const updatedButtonName = buttonText.replace(/"/g, " ")
+    expect(updatedButtonName.trim()).to.be.eq(buttonName)
   }
 
   async checkMoreThan20TariffProvided() {
@@ -208,26 +209,27 @@ class CustomWorld {
       expect(calculated_tariff).to.be.eq('Ermittelte Tarife')
       const lastPosition = await scrollPageToBottom(this.page)
 
-      await this.page.waitForSelector(loadMoreTariffOfferButton_path, { visible: true }, { timeout: 5000 })
-      const new_Tarifffs = await this.page.$eval(loadMoreTariffOfferButton_path, el => el.innerText);
-      var count = parseInt(new_Tarifffs.substring(0, 3).trim());
-      console.log("New more Tariffs OFFERS to be loaded:" + count)
-
-      if (count != 20) {
-        flag = false;
-        console.log("Final Tariff offer page will be loading")
-      }
-      if (count > 1) {
+      await this.page.waitFor(500)
+      if (await this.page.$(loadMoreTariffOfferButton_path) !== null) {
         await this.page.waitForSelector(loadMoreTariffOfferButton_path, { visible: true }, { timeout: 5000 })
-        await this.page.click(loadMoreTariffOfferButton_path, { timeout: 5000 })
-        await this.page.waitFor(2000);
+        const new_Tarifffs = await this.page.$eval(loadMoreTariffOfferButton_path, el => el.innerText);
+        var count = parseInt(new_Tarifffs.substring(0, 3).trim());
+        console.log("New more Tariffs OFFERS to be loaded:" + count)
+
+        if (count != 20) {
+          flag = false;
+          console.log("Final Tariff offer page will be loading")
+        }
+        if (count > 1) {
+          await this.page.waitForSelector(loadMoreTariffOfferButton_path, { visible: true }, { timeout: 5000 })
+          await this.page.click(loadMoreTariffOfferButton_path, { timeout: 5000 })
+          await this.page.waitFor(2000);
+        }
+      }
+      else {
+        break;
       }
     }
-    await this.page.waitForSelector('h1', { visible: true }, { timeout: 2000 })
-    const recomended_teriff = await this.page.$eval(header1_path, el => el.innerText);
-    expect(recomended_teriff).to.be.eq('Verivox-Tarifempfehlung')
-    const calculated_tariff = await this.page.$eval(header2_path, el => el.innerText);
-    expect(calculated_tariff).to.be.eq('Ermittelte Tarife')
   }
 }
 

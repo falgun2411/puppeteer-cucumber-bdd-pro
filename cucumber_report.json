@@ -24,7 +24,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3241000000
+              "duration": 1425000000
             }
           },
           {
@@ -37,7 +37,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6249000000
+              "duration": 5227000000
             }
           },
           {
@@ -50,7 +50,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2504000000
+              "duration": 1870000000
             }
           },
           {
@@ -63,7 +63,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3317000000
+              "duration": 3223000000
             }
           },
           {
@@ -75,9 +75,8 @@
               "location": "features\\support\\steps.js:24"
             },
             "result": {
-              "status": "failed",
-              "duration": 21593000000,
-              "error_message": "TimeoutError: Navigation timeout of 20000 ms exceeded\n    at G:\\cypressproject\\puppeteer-cucumber-bdd-pro\\node_modules\\puppeteer\\lib\\LifecycleWatcher.js:100:111\n    at async FrameManager.waitForFrameNavigation (G:\\cypressproject\\puppeteer-cucumber-bdd-pro\\node_modules\\puppeteer\\lib\\FrameManager.js:107:23)\n    at async Frame.waitForNavigation (G:\\cypressproject\\puppeteer-cucumber-bdd-pro\\node_modules\\puppeteer\\lib\\FrameManager.js:298:16)\n    at async Page.waitForNavigation (G:\\cypressproject\\puppeteer-cucumber-bdd-pro\\node_modules\\puppeteer\\lib\\Page.js:492:16)\n    at async CustomWorld.clickCompareNow (G:\\cypressproject\\puppeteer-cucumber-bdd-pro\\features\\support\\world.js:66:5)\n    at async CustomWorld.<anonymous> (G:\\cypressproject\\puppeteer-cucumber-bdd-pro\\features\\support\\steps.js:25:10)\n  -- ASYNC --\n    at Frame.<anonymous> (G:\\cypressproject\\puppeteer-cucumber-bdd-pro\\node_modules\\puppeteer\\lib\\helper.js:94:19)\n    at Page.waitForNavigation (G:\\cypressproject\\puppeteer-cucumber-bdd-pro\\node_modules\\puppeteer\\lib\\Page.js:492:53)\n    at Page.<anonymous> (G:\\cypressproject\\puppeteer-cucumber-bdd-pro\\node_modules\\puppeteer\\lib\\helper.js:95:27)\n    at CustomWorld.clickCompareNow (G:\\cypressproject\\puppeteer-cucumber-bdd-pro\\features\\support\\world.js:66:21)\n    at async CustomWorld.<anonymous> (G:\\cypressproject\\puppeteer-cucumber-bdd-pro\\features\\support\\steps.js:25:10)"
+              "status": "passed",
+              "duration": 15546000000
             }
           },
           {
@@ -89,7 +88,8 @@
               "location": "features\\support\\steps.js:28"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 2135000000
             }
           },
           {
@@ -100,7 +100,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1366000000
+              "duration": 609000000
             }
           }
         ]
@@ -121,7 +121,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2354000000
+              "duration": 1544000000
             }
           },
           {
@@ -134,7 +134,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 33842000000
+              "duration": 29695000000
             }
           },
           {
@@ -147,7 +147,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 11111000000
+              "duration": 11672000000
             }
           },
           {
@@ -160,7 +160,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5525000000
+              "duration": 5020000000
             }
           },
           {
@@ -173,20 +173,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2760000000
+              "duration": 2762000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 18,
-            "name": "he should also see a button labeled as In 5 Minuten online wechseln",
+            "name": "he should also see a button labeled as \"In 5 Minuten online wechseln\"",
             "match": {
               "location": "features\\support\\steps.js:49"
             },
             "result": {
               "status": "passed",
-              "duration": 516000000
+              "duration": 1330000000
             }
           },
           {
@@ -197,7 +197,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 572000000
+              "duration": 529000000
             }
           }
         ]
@@ -218,7 +218,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1374000000
+              "duration": 1305000000
             }
           },
           {
@@ -231,7 +231,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30572000000
+              "duration": 28637000000
             }
           },
           {
@@ -244,7 +244,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 831000000
+              "duration": 840000000
             }
           },
           {
@@ -257,7 +257,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 837000000
+              "duration": 829000000
             }
           },
           {
@@ -270,7 +270,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1260000000
+              "duration": 1272000000
             }
           },
           {
@@ -283,7 +283,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 52281000000
+              "duration": 66149000000
             }
           },
           {
@@ -294,7 +294,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 454000000
+              "duration": 491000000
             }
           }
         ]
