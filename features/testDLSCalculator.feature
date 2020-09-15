@@ -15,7 +15,7 @@ SO THAT I am able to select the best possible tariff for me
         When he selects one of the listed Tariffs
         And clicks on "Zum Angebot" button
         Then he should be able see the details of the selected Tariff
-        And he should also see a button labeled as In 5 Minuten online wechseln
+        And he should also see a button labeled as "In 5 Minuten online wechseln"
     
     Scenario: Lazy loading/pagination for loading the Result List
        Given User is on the DSL Result List

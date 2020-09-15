@@ -148,20 +148,15 @@ class CustomWorld {
     await this.page.waitForSelector(path_offerDetails, { visible: true }, { timeout: 1000 });
   }
 
-  async verifySwitchToOnlineIn5MinuteButton() {
+  async verifySwitchToOnlineIn5MinuteButton(buttonName) {
     const path_In5MinButton = '.responsive-label-txt.offer-page-cta'
     await this.page.waitForSelector(path_In5MinButton, { visible: true }, { timeout: 1000 });
-    // try {
-    //   const button = await this.page.evaluate(() => {
-    //     const btn = document.querySelector(In5MinButton_path);
-    //     return JSON.parse(JSON.stringify(getComputedStyle(btn)));
+    const buttonText = await this.page.$eval(path_In5MinButton, (elem) =>{
+      return window.getComputedStyle(elem, ':before').getPropertyValue('content')
+    });
+    console.log('buttonText:' + buttonText);   
+    expect(buttonText.trim()).to.be.eq(buttonName)
 
-    //   });clear
-    //   console.log(' In5MinButton_value 1 ' + button);
-
-    // } catch (e) {
-    //   console.log(' In5MinButton_value 1 fail ');
-    // }
   }
 
   async checkMoreThan20TariffProvided() {

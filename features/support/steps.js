@@ -46,8 +46,8 @@ Then('he should be able see the details of the selected Tariff', async function 
   return await this.verifyOfferDetailsOfSelectedOffer()
 })
 
-When(`he should also see a button labeled as In 5 Minuten online wechseln`, async function () {
-  return await this.verifySwitchToOnlineIn5MinuteButton()
+When(`he should also see a button labeled as {string}`, async function (buttonName) {
+  return await this.verifySwitchToOnlineIn5MinuteButton(buttonName)
 })
 
 When('there are more than 20 tariffs available for the provided Vorwahl and bandwidth', async function () {
